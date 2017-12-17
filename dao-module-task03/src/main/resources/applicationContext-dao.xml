@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+            http://www.springframework.org/schema/beans     
+            http://www.springframework.org/schema/beans/spring-beans.xsd     
+            http://www.springframework.org/schema/context     
+            http://www.springframework.org/schema/context/spring-context.xsd     
+            http://www.springframework.org/schema/mvc         
+            http://www.springframework.org/schema/mvc/spring-mvc.xsd
+            http://www.springframework.org/schema/tx 
+			http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Add support for component scanning -->
+	<context:component-scan base-package="by.htp.dao" />
+
+	<!-- Add support for conversion, formatting and validation support -->
+	<mvc:annotation-driven />
+
+	<!-- Define Database DataSource / connection pool в дао -->
+	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">
+		<property name="driverClass" value="com.mysql.jdbc.Driver" />
+		<property name="jdbcUrl"
+			value="jdbc:mysql://localhost:3306/task03db?useSSL=false" />
+		<property name="user" value="root" />
+		<property name="password" value="root22" />
+
+		<!-- these are connection pool properties for C3P0 -->
+		<property name="minPoolSize" value="5" />
+		<property name="maxPoolSize" value="20" />
+		<property name="maxIdleTime" value="300000" />
+	</bean>
+
+	<!-- Setup Hibernate session factory в дао -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="packagesToScan" value="by.htp.entity" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<!-- <prop key="hibernate.c3p0.max_statements">0</prop> -->
+				<!-- <prop key="hibernate.auto_close_session">false</prop> -->
+				<!-- <prop key="hibernate.c3p0.acquireRetryAttempts">60</prop> -->
+			</props>
+		</property>
+	</bean>
+
+</beans>
