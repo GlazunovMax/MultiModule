@@ -1,0 +1,114 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+* {                         /* Убираем отступы и поля для всех элементов */
+    margin: 0;
+    padding: 0;
+}
+
+body {                                    /*тег всего body*/
+    background-color: #f7f7f7;           /*Определяет цвет фона элемента. */
+    font-family: 'Roboto', sans-serif;    /*Устанавливает семейство шрифта*/
+	}
+
+#header {
+	
+    min-width: 1300px;                  /*Минимальная ширина*/
+    background-color: #dfdfdf;         /*Определяет цвет фона элемента. */
+    margin: 0 auto;                    /* Убираем отступы */
+    height: 80px;                      /* Высота блока */
+    text-align: right;               /*Выравнивание текста по центру*/
+    padding-top: 18px;                  /*Устанавливает значение поля от верхнего края содержимого элемента*/
+	/*border: 1px solid black;     /*Свойство позволяет одновременно установить толщину, стиль и цвет границы cо всех сторон элемента*/
+}
+
+
+#header a {
+    color: #4d4d4d;
+    font-size: 20px;
+    font-weight: 50;
+    height: 30px;
+    line-height: 15px;
+    display: inline-block;  /*Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе. */
+	margin-right: 25px;
+}
+
+#header p {
+	text-align: left;
+	 font-size: 40px; 
+    padding: 0 38px;
+}
+
+
+#content {
+    height: 600px;
+	width: 1300px;
+    margin: 0 auto;
+}
+
+
+#left{
+	float: left;
+	background: silver;
+	width: 260px;  
+	 height: 502px;
+}
+
+#center{
+	float: left;
+	background: green;
+	width: 1040px; 
+	height: 502px;
+	overflow: auto;
+	position: relative;
+}
+
+#content #left h3 {
+    width: 100%;
+	background: gray;
+	clear: both;
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: 30;
+    margin-bottom: 5px;
+	
+}
+
+#content #left ul {
+    color: #242424;
+	background: white;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+	margin: 0px 38px 52px 51px;
+}
+
+
+#content #center h3 {
+	margin: 20px 230px 0px 40px; 	 
+}
+
+#content #center h4 {
+	text-align: right;
+	margin-right: 100px;
+}
+
+#content #center h2 {
+	text-align: right;
+	line-height: 70px;
+	margin-right: 70px;
+	display: inline;	 
+}
+
+#footer { 
+  	margin: 0 auto;
+ 	background-color: #434445; 		/* Определяет цвет фона элемента. */
+  	width: 1300px; 				/*Ширина блока*/
+    height:30px; 					/*Высота блока*/
+    text-align: center;         /*    Выравнивание текста по центру */
+    color: #a4a4a4;					/*Цвет текста Copyright*/
+    font-size: 20px;               /* Размер шрифта в пикселях*/   				
+    line-height: 30px;			/*	Устанавливает интерлиньяж (межстрочный интервал) текста*/
+}
+
+

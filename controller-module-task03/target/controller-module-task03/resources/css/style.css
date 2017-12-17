@@ -1,0 +1,171 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
+
+* {                         /* Убираем отступы и поля для всех элементов */
+    margin: 0;
+    padding: 0;
+}
+
+body {                                    /*тег всего body*/
+    background-color: #f7f7f7;           /*Определяет цвет фона элемента. */
+    font-family: 'Roboto', sans-serif;    /*Устанавливает семейство шрифта*/
+	}
+
+#header {
+	
+    min-width: 1300px;                  /*Минимальная ширина*/
+    background-color: #dfdfdf;         /*Определяет цвет фона элемента. */
+    margin: 0 auto;                    /* Убираем отступы */
+    height: 80px;                      /* Высота блока */
+    text-align: right;               /*Выравнивание текста по центру*/
+    padding-top: 18px;                  /*Устанавливает значение поля от верхнего края содержимого элемента*/
+	/*border: 1px solid black;     /*Свойство позволяет одновременно установить толщину, стиль и цвет границы cо всех сторон элемента*/
+}
+
+
+#header a {
+    color: #4d4d4d;
+    font-size: 20px;
+    font-weight: 50;
+    height: 30px;
+    line-height: 15px;
+    display: inline-block;  /*Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе. */
+	margin-right: 25px;
+}
+
+#header p {
+	text-align: left;
+	 font-size: 40px; 
+    padding: 0 38px;
+}
+
+
+#content {
+    height: 600px;
+	width: 1300px;
+   /* min-width: 1300px; */
+    margin: 0 auto;
+   /* min-height: calc(100vh - 140px); */
+}
+
+
+#left{
+	float: left;
+	background: silver;
+	width: 260px;  /*20%;*/
+	 height: 502px;
+	/*border-left: 1px solid silver;*/
+	/*border-right: 1px solid silver;*/
+}
+
+#center{
+	/*border-right: 1px solid silver;*/
+	float: left;
+	background: green;
+	width: 1040px; /*79%;*/
+	height: 502px;
+	overflow: auto;
+	position: relative;
+}
+
+#content #left h3 {
+    width: 100%;
+	background: gray;
+	clear: both;
+    /*float: left;*/
+    text-align: center;
+    color: black;
+    font-size: 40px;
+    font-weight: 30;
+    margin-bottom: 5px;
+	
+}
+
+#content #left ul {
+    color: #242424;
+	background: white;
+    font-size: 30px;
+    font-weight: 300;
+    text-align: left;
+	margin: 0px 38px 52px 51px;
+/* 	margin: 0px 40px 52px 61px; */
+  
+}
+
+
+/* #content #center h4 { */
+/* 	 margin-left: 20px; 	 */
+/* } */
+
+#content #center h3 {
+	margin: 20px 230px 0px 40px; 	 
+}
+
+/*delete*/
+#content #center h4 {
+	text-align: right;
+	margin-right: 100px;
+/* 	margin-top: 0px; */
+	
+}
+
+#content #center h2 {
+	text-align: right;
+	 line-height: 70px;
+	/*margin-top: 20px;*/
+/* 	margin-left: 40px; */
+		margin-right: 70px;
+	display: inline;	 
+}
+
+
+
+
+/* #content #center a { */
+/* 	display: inline-block; */
+/* 	margin-right: 40px; */
+/* } */
+
+
+/* #content #center  a { */
+/*     font-size: 20px; */
+/*     text-align: left; */
+/*     text-decoration: none; */
+/*     height: 30px; */
+/* 	position: absolute; */
+/* 	right:120px; */
+/* 	line-height: 1px;	 */
+/* } */
+
+/* .delete{ */
+/* 	font-weight: bold; */
+/* 	width: 130px;  */
+/* 	padding: 5px 10px;  */
+/* 	margin-top: 30px; */
+/* 	margin-left: 70px; */
+/* 	margin-right: 40px; */
+/* 	background: #ff0000; */
+/* 	text-align: right; */
+	
+/* } */
+
+
+#footer { 
+	
+
+	
+	
+  margin: 0 auto;
+    background-color: #434445; 		/* Определяет цвет фона элемента. */
+   width: 1300px; 				/*Ширина блока*/
+  						 /*float: center;     	*/			/*Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, обтекают его по правой стороне.*/ 
+    height:30px; 					/*Высота блока*/
+     text-align: center;         /*    Выравнивание текста по центру */
+    color: #a4a4a4;					/*Цвет текста Copyright*/
+    font-size: 20px;               /* Размер шрифта в пикселях*/
+  						 /* font-weight: 50;/*				/*Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100. Сверхсветлое начертание, которое может отобразить браузер, имеет значение 100, а сверхжирное — 900. Нормальное начертание шрифта (которое установлено по умолчанию) эквивалентно 400, стандартный полужирный текст — значению 700. */
+   
+							/*border: 1px solid black;*/
+   line-height: 30px;			/*	Устанавливает интерлиньяж (межстрочный интервал) текста*/
+}
+
+
